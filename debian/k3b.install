@@ -1,0 +1,4 @@
+etc/xdg/k3btheme.knsrc
+usr/bin/k3b
+usr/share/applications/org.kde.k3b.desktop
+usr/share/metainfo/org.kde.k3b.appdata.xml

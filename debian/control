@@ -1,0 +1,121 @@
+Source: k3b
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Michael Meskes <meskes@debian.org>, Mark Purcell <msp@debian.org>
+Build-Depends: debhelper (>= 11~), cmake, pkg-kde-tools (>= 0.15.16),
+ extra-cmake-modules,
+ qtbase5-dev (>= 5.5.0~),
+ libqt5webkit5-dev,
+ libkf5archive-dev (>= 5.21.0~),
+ libkf5cddb-dev,
+ libkf5config-dev (>= 5.21.0~),
+ libkf5coreaddons-dev (>= 5.21.0~),
+ libkf5doctools-dev (>= 5.21.0~),
+ libkf5filemetadata-dev (>= 5.21.0~),
+ libkf5i18n-dev (>= 5.21.0~),
+ libkf5iconthemes-dev (>= 5.21.0~),
+ libkf5jobwidgets-dev (>= 5.21.0~),
+ libkf5kcmutils-dev (>= 5.21.0~),
+ libkf5kio-dev (>= 5.21.0~),
+ libkf5newstuff-dev (>= 5.21.0~),
+ libkf5notifications-dev (>= 5.21.0~),
+ libkf5notifyconfig-dev (>= 5.21.0~),
+ libkf5service-dev (>= 5.21.0~),
+ libkf5solid-dev (>= 5.21.0~),
+ libkf5widgetsaddons-dev (>= 5.21.0~),
+ libkf5xmlgui-dev (>= 5.21.0~),
+ libavformat-dev, libdvdread-dev, libflac++-dev,
+ libflac-dev, libmad0-dev, libmpcdec-dev,
+ libsamplerate0-dev, libsndfile1-dev, libtag1-dev,
+ shared-mime-info, libvorbis-dev, libcam-dev [kfreebsd-any],
+ libmp3lame-dev
+Standards-Version: 4.2.1
+Homepage: http://www.k3b.org
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/k3b.git
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/k3b
+
+Package: k3b
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ k3b-data (= ${source:Version}), libk3b7 (= ${binary:Version}),
+ wodim | cdrskin, cdparanoia, cdrdao [linux-any], genisoimage, udisks2 [linux-any]
+Recommends: libk3b7-extracodecs, dvd+rw-tools, vcdimager, growisofs
+Suggests: k3b-extrathemes, k3b-i18n, normalize-audio, sox, movixmaker-2,
+ kde-config-cddb
+Description: Sophisticated CD/DVD burning application
+ K3b provides a comfortable user interface to perform most CD/DVD burning
+ tasks. While the experienced user can take influence in all steps
+ of the burning process the beginner may find comfort in the automatic settings
+ and the reasonable k3b defaults which allow a quick start.
+
+Package: k3b-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Sophisticated CD/DVD burning application - data files
+ K3b provides a comfortable user interface to perform most CD/DVD burning
+ tasks. While the experienced user can take influence in all steps
+ of the burning process the beginner may find comfort in the automatic settings
+ and the reasonable k3b defaults which allow a quick start.
+ .
+ This package contains the required data files common to all architectures.
+
+Package: k3b-extrathemes
+Architecture: all
+Depends: ${misc:Depends}, k3b
+Description: Sophisticated CD/DVD burning application - extra themes
+ K3b provides a comfortable user interface to perform most CD/DVD burning
+ tasks. While the experienced user can take influence in all steps
+ of the burning process the beginner may find comfort in the automatic settings
+ and the reasonable k3b defaults which allow a quick start.
+ .
+ This package contains additional themes for K3b.
+
+Package: k3b-i18n
+Section: localization
+Architecture: all
+Depends: ${misc:Depends}, k3b
+Description: Sophisticated CD/DVD burning application - localizations files
+ K3b provides a comfortable user interface to perform most CD/DVD burning
+ tasks. While the experienced user can take influence in all steps
+ of the burning process the beginner may find comfort in the automatic settings
+ and the reasonable k3b defaults which allow a quick start.
+ .
+ This package contains translations files.
+
+Package: libk3b-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends},
+ libk3b7 (= ${binary:Version})
+Description: KDE CD/DVD burning application library - development files
+ K3b provides a comfortable user interface to perform most CD/DVD burning
+ tasks. While the experienced user can take influence in all steps
+ of the burning process the beginner may find comfort in the automatic settings
+ and the reasonable k3b defaults which allow a quick start.
+ .
+ This package contains development files.
+
+Package: libk3b7
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE CD/DVD burning application library - runtime files
+ K3b provides a comfortable user interface to perform most CD/DVD burning
+ tasks. While the experienced user can take influence in all steps
+ of the burning process the beginner may find comfort in the automatic settings
+ and the reasonable k3b defaults which allow a quick start.
+ .
+ This package contains runtime libraries.
+
+Package: libk3b7-extracodecs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libk3b7 (= ${binary:Version}),
+Description: KDE CD/DVD burning application library - extra decoders
+ K3b provides a comfortable user interface to perform most CD/DVD burning
+ tasks. While the experienced user can take influence in all steps
+ of the burning process the beginner may find comfort in the automatic settings
+ and the reasonable k3b defaults which allow a quick start.
+ .
+ This package contains runtime libraries for the MP3 and FFMPEG decoder plugin.

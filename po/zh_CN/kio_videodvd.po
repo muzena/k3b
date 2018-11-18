@@ -1,0 +1,34 @@
+# translation of kio_videodvd.po to 简体中文
+# Copyright (C) 2002,2003, 2009 Free Software Foundation, Inc.
+# Zong Yaotang <zong@cosix.com.cn>
+#
+# Xiong Jiang <jxiong@offtopic.org>, 2002,2003.
+# Funda Wang <fundawang@linux.net.cn>, 2004-2005.
+# Ni Hui <shuizhuyuanluo@126.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-11-19 20:09+0100\n"
+"PO-Revision-Date: 2018-02-28 02:27-0500\n"
+"Last-Translator: guoyunhebrave <guoyunhebrave@gmail.com>\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-stable/messages/kdemultimedia/kio_videodvd.pot\n"
+
+#: videodvd.cpp:168 videodvd.cpp:297
+#, kde-format
+msgid "No Video DVD found"
+msgstr "未找到视频 DVD"
+
+#: videodvd.cpp:209 videodvd.cpp:374
+#, kde-format
+msgid "Read error."
+msgstr "读取出错。"

@@ -2,12 +2,16 @@
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
+#DH_MISSING = --fail-missing
 
 export DEB_LDFLAGS_MAINT_APPEND := -Wl,--as-needed
 
 %:
-	dh $@ --fail-missing --with kf5
-
+	dh $@ --with kf5
+	
+override_dh_missing:
+	dh_missing --list-missing
+	
 override_dh_auto_configure:
 	dh_auto_configure -Skf5 -- -DK3B_ENABLE_HAL_SUPPORT=OFF -DBUILD_TESTING=OFF
 
